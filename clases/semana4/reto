@@ -1,0 +1,83 @@
+#mostrar estudiantes
+select c.id_cliente, c.nombre from cliente c
+join cliente_tipo t on t.id_cliente_tipo = c.id_cliente_tipo
+where t.descripcion = 'estudiante'
+
+#mostrar sponsor
+select c.id_cliente, c.nombre from cliente c
+join cliente_tipo t on t.id_cliente_tipo = c.id_cliente_tipo
+where t.descripcion = 'sponsor'
+
+#mostrar tipo_cliente, nombre, id_sponsor
+select c.nombre, t.descripcion tipo_cliente, s.id_cliente_sponsor id from cliente_sponsor s 
+join cliente c on s.id_cliente = c.id_cliente
+join cliente_tipo t on t.id_cliente_tipo = c.id_cliente_tipo
+
+#crear una tabla
+CREATE TABLE `db_hack`.`sponsor` (
+  `id_sponsor` INT(11) NULL AUTO_INCREMENT,
+  `razon_social` VARCHAR(45) NOT NULL,
+  `rif` VARCHAR(15) NOT NULL,
+  `telefono` INT NOT NULL,
+  `direccion` VARCHAR(150) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `contacto` VARCHAR(45) NOT NULL,
+  `telefono_contacto` INT NOT NULL,
+  PRIMARY KEY (`id_sponsor`));
+
+#estudiante y su sponsor
+select e.nombre, s.razon_social from estudiante e
+join sponsor s on s.id_sponsor = e.id_sponsor
+
+#Productos de un estudiante
+select e.nombre, p.descripcion, p.monto from estudiante e
+join orden o on o.id_estudiante = e.id_estudiante
+join orden_detalle k on k.id_orden = o.id_orden
+join producto p on p.id_producto = k.id_producto
+where e.id_estudiante = 10
+
+#pagos de un estudiante
+select e.nombre, o.id_orden, p.monto from estudiante e 
+join orden o on o.id_estudiante = e.id_estudiante
+join pago p on p.id_orden = o.id_orden
+where e.id_estudiante = 10
+
+#pago total de cada estudiante
+select e.nombre, o.id_orden, sum(p.monto) from estudiante e 
+join orden o on o.id_estudiante = e.id_estudiante
+join pago p on p.id_orden = o.id_orden
+#where e.id_estudiante = 11
+group by o.id_orden
+
+#monto total de los productos de cada cliente
+select e.nombre, sum(p.monto) from estudiante e
+join orden o on o.id_estudiante = e.id_estudiante
+join orden_detalle k on k.id_orden = o.id_orden
+join producto p on p.id_producto = k.id_producto
+group by o.id_orden
+
+#Pagos de sponsor
+select s.razon_social, o.id_orden, p.monto from sponsor s 
+join orden o on o.id_sponsor = s.id_sponsor
+join pago p on p.id_orden = o.id_orden
+#where e.id_estudiante = 10
+
+#orden de compras
+select pro.razon_social, o.id_orden, p.monto from proveedor pro
+join orden o on o.id_proveedor = pro.idproveedores
+join pago p on p.id_orden = o.id_orden
+
+
+
+
+#estado de las ordenes de productos vendidos		ingresos
+select o.id_orden, sum(p.monto) from orden o
+join orden_detalle k on k.id_orden = o.id_orden
+join producto p on p.id_producto = k.id_producto
+group by id_orden
+
+#estado de las ordenes de productos comprados		egresos
+select o.id_orden, sum(e.costo) from orden o
+join orden_detalle k on k.id_orden = o.id_orden
+join equipo_oficina e on e.id_equipo_oficina = k.id_equipo_oficina
+group by id_orden

@@ -1,0 +1,16 @@
+header{
+	background-color: black;
+	height: 60px;
+}
+.logo{
+	height: 45px;
+	text-align: center;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+.icon{
+	height: 15px;
+	margin-top: 20px;
+	margin-right: 20px;
+	
+}

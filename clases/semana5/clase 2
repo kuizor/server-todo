@@ -1,0 +1,21 @@
+Clase 2 - 12-01-2015
+Mentor: Abraham
+Tema: Rails
+Contenido: Crear tablas pibote
+
+Crear una tabla modelo con una referencia (tabla pibote)
+rails g model History matches:integer points:integer kills:integer deads:integer assistents:integer player:references champion:references
+
+Borrar una fila de la tabla 
+	Player.destroy(numero)
+	Player.find(15).destroy
+
+Borrar una fila con una condicion
+	Player.where(name:"Jose").destroy_all
+	Player.destroy_all(name:"Carlos") 
+
+Crear la llave foranea en las tablas del pibote:
+	has_many :NombreTablaPibote
+	has_many :nombreTablaRecorrer, through: :NombreTablaPibote 
+
+Crear tabla pibote: rails g migration CreateJoinTableCustomerProduct customer product

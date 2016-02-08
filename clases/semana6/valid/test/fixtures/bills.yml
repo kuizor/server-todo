@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: MyString
+  subtotal: 1
+  tax: 1
+  total: 1
+  client_id: 
+
+two:
+  date: MyString
+  subtotal: 1
+  tax: 1
+  total: 1
+  client_id: 

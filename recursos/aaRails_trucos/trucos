@@ -1,0 +1,13 @@
+#Manejo de errores
+	#BAD RECUEST Error
+		rescue_from ActionController::ParameterMissing do
+	  		#render :nothing => true, :status => 405
+	  		render json:{message: "Parametros malos"}, nothing: true, status: 400
+		end
+	#Recurso no encontrado Error 404
+		rescue_from ActiveRecord::RecordNotFound, with: :r_not_found
+		#metodo
+		def r_not_found(error)
+			1)render json: {error: error.message}, status: :not_found
+			2)render json:{message: "Parametros malos",params:params}, nothing: true, status: :not_found
+		end

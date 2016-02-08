@@ -1,0 +1,41 @@
+Tutor: Abraha Gonzalez
+Clase de Base de Datos
+
+
+Select columna from table 													=> selecciona celda de tabla (select)
+
+SELACT DISTINCT columna_name, columna_name FROM table						=> selecciona distinto (distinct)
+
+SELECT columna, columna FROM table WHERE columna operador value				=> Donde (where)
+
+SELECT *FROM customers WHERE country= 'Venezuela' AND city = 'ccs'			=> and (and)
+
+SELECT *FROM customers WHERE city= 'ccs' OR city= 'Mcay'					=> or (or)
+
+SELECT colum, colum FROM table ORDER BY colum desc, colum asc 				=> ordenar lista (order)
+
+insert into table (value1,value2) values (value1,value2)					=> insertar valores (insert)
+
+update table set colum1=value1, colum2=value2 where colum=values 			=> actualizar valores (update))
+
+delete from table where colum= value1 										=> borrar(delete)
+
+SELECT colum FROM table LIMIT 5												=> limite de datos(limit)
+
+SELECT *FROM table WHERE colum LIKE '%pepe%'								=> selecciona con patron(like)
+
+SELECT *FROM table WHERE colum LIKE 'ber%'									=> selecciona donde lo que viene de BER% (%)
+
+select *from table where colum in('tengaEsto','yEsto')						=> busqueda dentro de (in)columnas
+
+select *from table where colum between valor and valore 					=> Select en condicion dentro (between)
+
+select table.column, table2.column from table inner join table2 on table.column = table2.colum => union
+
+select column from table inner join tabla2 on tabla.column = tabla2.column  => Union interna (inner join)
+
+SELECT column FROM table LEFT JOIN table2
+
+
+
+numero de ordenes maximas de las personas

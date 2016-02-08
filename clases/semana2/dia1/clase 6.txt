@@ -1,0 +1,86 @@
+semana2/dia1
+Mentor: Luis
+
+gamer:   https://www.bloc.io/ruby-warrior/#/warriors/226042/levels/8
+
+Utilice warrior.feel.empty ? para ver si hay algo 
+en frente de usted , y warrior.attack ! para luchar
+ contra ella . Recuerde que sólo puede hacer una acción
+  ( que termina en ! ) Por turn.k
+
+
+Tenga cuidado de no morir! Utilice warrior.health 
+para mantener un ojo sobre su salud , y warrior.rest ! 
+para ganar el 10% del máximo de salud de la espalda
+
+Utilice warrior.feel.captive ? para ver si hay un 
+cautivo y warrior.rescue ! para rescatarlo. No ataques a los cautivos .
+
+Se puede caminar hacia atrás al pasar ' : hacia atrás ' 
+como argumento para caminar !. Lo mismo va para la sensación , 
+rescate ! y el ataque !. Los arqueros tienen una distancia de ataque limitado.
+
+
+7:Usted no es tan eficaz y atacar hacia atrás. Utilice warrior.feel.wall ? y warrior.pivot ! girar.
+8:Utilice warrior.look para determinar sus alrededores, y warrior.shoot ! para disparar una flecha ..
+
+
+
+=============================
+wall = pared
+ticking = tictac
+empty = vacio
+enemy = enemigo
+captive = cautivo
+
+walk = camina
+rescue = rescata
+
+============================================
+class Player
+  def initialize
+    @sw = 0
+    @paso = 0
+    @cont = 0
+  end
+  def play_turn(warrior)
+    if(warrior.feel.wall?)                            #si tienes la pared, voltear
+      warrior.pivot!
+      
+    elsif(warrior.feel(:backward).empty? && @sw == 0) #Si tiene espacio atras y sw = 0, camina atras
+        warrior.walk!(:backward)
+   
+
+    elsif(warrior.feel(:backward).captive?)           #Si tiene un rehen atras?, rescata rehen
+      warrior.rescue!(:backward)
+    
+    elsif(@paso == 3  && warrior.health<20)           #Si lleva 3 pasos y la vida esta menos de 20, (si tiene un enemigo, ataca; si esta vacio atras, camina para atras), restaura vida
+      if(warrior.feel.enemy?)
+        warrior.attack!
+      elsif(warrior.feel(:backward).empty?)
+        warrior.walk!(:backward)
+      else
+        warrior.rest!
+      end
+      
+    elsif(warrior.feel.empty?)                        #
+      warrior.walk!
+      @paso += 1
+      @sw = 1
+    else(warrior.feel.enemy?)
+      
+      if(warrior.feel.captive?)
+        warrior.rescue!
+      else
+        warrior.shoot!
+      end
+      
+      warrior.attack!
+      @cont +=1
+      if(@cont == 3)
+        @paso=3
+      end
+    end
+    #@live = warrior.health
+  end
+end

@@ -1,0 +1,27 @@
+Programacion Orientada a Objetos
+
+================================ Definicion de la Clase
+
+Class Person
+	
+	attr_writer :color				=>Setter o metodo de escritura para la variable de la clase
+	attr_reader :color				=>Getter o metodo de solo lectura de la variable interna
+	attr_assesor :color				=>Getter y Setter de la variable
+
+
+	def initialize color			=> metodo constructor donde recibe todas las variables
+		@color = color
+	end
+
+	def color color					=> setter de la variable (Quien envia)
+		@color = color
+	end
+
+	def color= color				=> Getter de la variable (Quien recibe)
+
+	end
+end
+
+pepe = Person.new("blanco")			=> Inizializando la clase Persona y se le setea el color 
+
+

@@ -1,0 +1,66 @@
+body{
+	margin: 0;
+}
+.content{
+	height: 100vh;
+	width: 100%;
+	background-color: gray;
+	padding: 0%;
+}
+.headers{
+	height: 7%;
+	width: 100%;
+	background-color: white;
+	padding: 5px;
+	position: fixed;
+}
+.cont-headers{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.logo{
+    position: absolute;
+    left: 26px;
+}
+
+.banner{
+	position: fixed;
+	height: 45%;
+}
+.body{
+	background-color: green;
+	height: 63%;
+	width: 100%;
+}
+.menuTop{
+    top: 11px;
+    right: 3%;
+    height: 80%;
+    width: 33%;
+    position: absolute;
+    text-align: center;
+}
+.transparent{
+	b
+    position: absolute;
+    top: 56px;
+    right: 2%;
+    width: 38%;
+    height: 241px;
+    background-color: rgba(0, 0, 0, 0.41);
+}
+.cont-banner{
+
+}
+#bannerTop{
+	position: inherit;
+    width: 100%;
+    height: 100%;
+}
+#link{
+	color: grey;
+    font-size: 15px;
+    font-family: sans-serif;
+    text-decoration: blink;
+}

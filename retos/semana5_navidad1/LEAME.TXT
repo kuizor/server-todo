@@ -1,0 +1,38 @@
+LEAME..
+
+
+Este programa viene configurado los parametros, la clave y el secret
+por defecto..
+para que funcione, no coloque ningun dato... deje los espacios vacios
+y presione la tecla "ENTER". Tambien tiene la opcion de agregar los datos,
+en caso que los tenga a la mano.
+
+Si usted borra la base de datos.. El programa es capaz de reconocerlo...
+
+Control de Versiones:
+
+1.0	Testing.
+1.1	Validacion version 1.2
+1.2 Datos por defecto.
+1.3	Modificacion de mensajes en pantalla.
+1.4 Integracion de Fuentes.
+1.5 Manejo de excepciones para el control de errores..
+1.6 Realizar varias cartas.
+1.7 Evitar recargar las fuentes de consulta.
+1.8 Paginado de fuentes
+
+Mensajes de errores:
+001 = Falla en el request del PDF
+002 = Falla en la creacion del archivo PDF
+003 = Falla en el cuerpo del PDF
+004 = Falla en el request del PNG
+005 = Falla en la creacion del archivo PNG
+006 = Falla en el cuerpo del PNG
+007 = Falla en el request de la fuente
+008 = Falla al enviar el email
+009 = Falla al abrir el archivo pdfs
+010 = Error al mostrar los pdfs
+011 = Error al abrir el archivo pngs
+012 = Error al mostrar los pngs
+013 = Error al crear archivo pdfs
+014 = Error al crear archivo pngs

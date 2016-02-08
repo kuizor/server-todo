@@ -1,0 +1,14 @@
+Instalacion de Ruby ------------------
+\curl -sSL https://get.rvm.io | bash
+
+\curl -sSL https://get.rvm.io | bash -s stable --without-gems="rvm rubygems-bundler"
+
+Para una barra de progreso muentras se descarga:
+
+echo progress-bar >> ~/.curlrc
+
+
+Instalar:
+
+Bundle
+

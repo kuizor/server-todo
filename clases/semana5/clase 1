@@ -1,0 +1,38 @@
+Clase 1 - 11-01-2015
+Mentor: Daniel
+Tema: Rails
+Contenido: Crear tablas en Rails
+
+Explicacion:
+	Framework -> entorno web
+		Node-> no es un frameworks sino, un rountime.
+		postman
+		heroku
+		Capistran -> automatizar tareas
+		Cheff
+	Metodologias TDD y BDD de Rails
+	Plantillas ->para no erpetir codigos.
+	gemfile.lock - > bloquear gemas de ruby para no usar varias
+	Rest -> arquitectura de distribucion de recursos(get-post-..)
+	CRUD -> GEt-Post-Patch-Dele
+------------------------------------------------------
+Herramienta Db
+	sqliteman -> manejador de bd
+------------------------------------------------------
+Comandos:
+	rake db:create -> crear las BD
+	rake db:rollback -> retroceder el paso anterior en la Db
+ActiveRecord::Base -> 	
+
+Comandos de Rails-console
+
+	p = Person.new
+	p.name = ""
+	p.save
+	Person.find(1)
+	Person.create({name:"",lastname:""})
+	Person.count
+	Person.delete(3)
+	Players.take
+	Player.all -> muestra todos los registros					
+						

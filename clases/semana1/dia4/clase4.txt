@@ -1,0 +1,38 @@
+================================== HErencia
+
+modificadores de acceso
+public 					=>puedo acceder fuera de la clase
+private					=>NO puedo acceder fuera de la clase
+protected				=>Tampoco puedo acceder desde afuera
+
+================================== Cardinalidad
+
+Es una forma en la cual se puede tener uno o mas obetos.
+
+
+
+================================== servicio 
+Clases de servicio => tipo_direccion
+
+class Tipo_direccion
+	
+	@@tipo =["FISCAL","COBRO","HABITACION"]
+
+	def self.fiscal
+		@@tipo[0]
+	end
+	def self.cobro
+		@@tipo[1]
+	end
+	def self.habitacion
+		@@tipo[2]
+	end
+
+end
+
+====================================	despinoza@academiahack
+CARPA => capacidad
+CIRCO => valor de la entrada
+PAYASO => cantidad de payasos del circo
+ANIMALES => cantidad de animales en la carpa
+PERSONA => 

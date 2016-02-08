@@ -1,0 +1,17 @@
+semana2/dia2
+Mentor: Abraham
+=============================
+TEMAS:
+
+	Protocolo HTTP
+	Puerto 80
+	Dominio
+	Introcuccion a json (javaScript Object Notation)
+		POST agregar
+		GET obtener
+		PUT modificar
+		Api (Interfaz de Programacion de Aplicaciones)
+		---------
+		reddint
+		mashable
+		digg

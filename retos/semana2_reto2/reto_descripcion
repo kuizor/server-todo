@@ -1,0 +1,48 @@
+Tool  Ip
+=
+
+Crear herramientas que permita analizar una ip o un domino,
+
+Se espera poder realizar inicialmente:
+
+- ping (ip)
+- Obtener el país (ip)
+- Obtener la ip y geolocalización (dominio)
+- Geolocalizar (ip)
+- TraceRoute (ip)
+- Obtener Cabeceras de respuesta (dominio web)
+- Obtener los enlaces (domino web)
+- DnsLookup (dominio)
+
+Cada operación debe tratarse como si fuese un plugin de la herramienta
+
+Como bono se espera que la herramienta reconozca los plugins que se encuentren dentro de la carpeta plugins
+
+# https://github.com/rest-client/rest-client
+# https://hackertarget.com/ip-tools/
+# http://geoip.nekudo.com/api
+# https://freegeoip.net/json
+
+Response#headers: A hash of HTTP response headers
+
+===================================================================================
+Mtr (My Trace Route) [MTR98] es una herramienta de diagnóstico de red utilizada en sistemas GNU/Linux, que combina las funcionalidades básicas de las aplicaciones traceroute y ping.Puede ejecutarse tanto desde un terminal o a través de una interfaz gráfica. Existe también una versión disponible para el sistema operativo Microsoft Windows llamada WinMTR[WMT02
+===================================================================================
+DNS Lookup (buscar DNS)
+===================================================================================
+Reverse DNS Lookup (Busqueda DNS en reversa)
+La búsqueda DNS inversa o la resolución DNS inversa (rDNS) es la determinación de un nombre de dominio que está asociado a una determinada dirección IP utilizando el Sistema de nombres de dominio (DNS) de Internet.
+
+Las redes de ordenadores utilizan el Sistema de Nombres de Dominio para determinar la dirección IP asociada a un nombre de dominio. Este proceso también se conoce como la resolución de DNS hacia adelante. La búsqueda de DNS inversa es el proceso inverso, la resolución de una dirección IP a su nombre de dominio designado.
+
+La base de datos de DNS inversa de la Internet tiene sus raíces en la dirección y el área de enrutamiento de parámetros (.arpa) del dominio de nivel superior de Internet. IPv4 utiliza el dominio in-addr.arpa y el dominio ip6.arpa se delega para IPv6. El proceso de la resolución inversa de una dirección IP utiliza el tipo de registro DNS puntero (registro PTR).
+===================================================================================
+Whois Lookup (Buscar WHOIS)
+WHOIS es un protocolo TCP basado en petición/respuesta que se utiliza para efectuar consultas en una base de datos que permite determinar el propietario de un nombre de dominio o una dirección IP en Internet. Las consultas WHOIS se han realizado tradicionalmente usando una interfaz de línea de comandos, pero actualmente existen multitud de páginas web que permiten realizar estas consultas. Estas páginas siguen dependiendo internamente del protocolo WHOIS para conectar a un servidor WHOIS y hacer las peticiones. Los clientes de línea de comandos siguen siendo muy usados por los administradores de sistemas.
+===================================================================================
+GeoIP Lookup (Localizacion Geografica de IP)
+===================================================================================
+ Reverse IP Lookup ()
+===================================================================================
+ HTTP Headers (HTTP cabeceras)
+===================================================================================

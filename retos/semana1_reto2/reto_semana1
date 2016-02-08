@@ -1,0 +1,80 @@
+Queremos ahora extender el ejercicio sobre clases realizado en la mañana del viernes. 
+La idea general es que los "objetos complejos" sean construidos con materiales. Los 
+materiales son limitados, por lo cual debe existir una lista de materiales disponibles 
+que debe tener valores de cantidad iniciales definidos por el programador. Los "objetos 
+complejos" pueden ser construidos siguiendo una receta de combinaciones de materiales; 
+para ello, seguiremos la documentación del juego "MineCraft" tomándo en cuenta únicamente 
+la cantidad de materiales requeridos (ref: http://minecraftwiki.es/Fabricaci%C3%B3n).
+
+Ejemplo: 
+  - El "objeto complejo" MADERA tendrá en su receta el material TRONCO en una cantidad de uno (1). 
+  - El "objeto complejo" PALO tendrá en su receta el material MADERA en una cantidad de dos (2). 
+  - El "objeto complejo" ANTORCHA tendrá en su receta el material PALO en una cantidad de 
+  uno (1) y el material CARBÓN en una cantidad de uno (1). 
+
+Las personas pueden BUSCAR materiales y CONSTRUIR "objetos complejos". El método búsqueda 
+
+debe arrojar una lista de materiales con sus cantidades encontradas. El método construcción 
+
+debe crear un nuevo "objeto complejo" a partir de los objetos construidos con anterioridad 
+por las instancias de la clase Persona, los materiales encontrados y los materiales acumulados.
+
+
+Instrucciones:
+
+*1. Se deben especificar siete (7) recetas de "objetos complejos". Para ello seguir la referencia 
+de MineCraft http://minecraftwiki.es/Fabricaci%C3%B3n
+
+2. Se debe seguir el siguiente formato para la especificacion de recetas de "objetos complejos":
+  recetas = {palo: {madera: 2}, 
+             antorcha: {palo: 1, carbon:1} 
+            }
+  La variable receta debe ser única y no debe poder ser modificada.
+
+*3. La lista de materiales disponibles debe ser definida por el programador en una clase "Material" 
+siguiendo el siguiente formato:
+disponible = {tronco: 20, 
+              carbon: 20,
+              piedra: 20 
+            }
+  La lista de materiales es única y puede ser modificada desde su clase
+
+4. La lista de materiales disponibles debe actualizarse cada vez que una persona encuentre un material. 
+
+Ejemplo:
+Luego de que una persona encuentra dos (2) unidades de piedra, el hash presentado anteriormente debe ser actualizado a:
+disponible = {tronco: 20, 
+              carbon: 20,
+              piedra: 18 
+            }
+
+5. La búsqueda de materiales debe dar como resultado un hash de materiales y cantidades, ambos encontrados de forma aleatoria.
+
+6. Los materiales encontrados y sus cantidades deben ser obtenidos de forma aleatoria a partir de los 
+materiales disponibles. Es decir, si un material tiene como valor cero (0) en el hash de materiales 
+disponibles, dicho material no debe ser devuelto como material encontrado.
+
+7. La clase Persona debe contener un método "construir" que tome en cuenta:
+  - Los materiales encontrados
+  - Los materiales acumulados
+  - Los objetos complejos creados con anterioridad por la clase Persona
+
+8. La clase Objeto Complejo debe recibir los materiales y objetos complejos desde la clase Persona 
+como un hash. Además, tomándo en cuenta los materiales y objetos complejos recibidos por argumento, 
+debe revisar las opciones de recetas de construcción hasta encontrar aquella que se pueda llevar a 
+cabo. Una vez encontrada la primera receta que se pueda crear, se debe retornar un string con el 
+nombre del "objeto complejo" creado. 
+
+9. La lista de materiales acumulados, los cuales se encuentran guardados en la clase persona, debe 
+ser actualizado luego de encontrar materiales y luego de construir "objetos complejos" (la construcción 
+de "objetos complejos" gasta materiales, que debe verse reflejado en la disminución de los materiales 
+acumulados por la clase Persona). Igualmente, la lista de "objetos complejos" en la clase Persona debe 
+ser actualizada luego de la construcción.
+
+10. El juego se terminará cuando se acaben todos los materiales disponibles
+
+
+
+Hola a todos @channel arriba está publicado el reto del fin de semana. 
+Para ser entregado para el día domingo a la medianoche. La entrega debe 
+ser en el correo mentores@academiahack.com.ve

@@ -1,0 +1,102 @@
+--------------------------------------------------SELECt
+=>SELECT c.customerNumber, c.customerName FROM customers c
+			WHERE c.customerNumber = '103'
+
+=>SELECT *FROM customers c WHERE c.customerNumber < 120
+
+=>select e.firstName, e.employeeNumber from employees e
+			where e.employeeNumber = 1370
+
+-----------------------------------------------ORDENAR DE FORMA ASENDENTE O DESENDENTE
+
+=>SELECT *FROM customers c where c.customerNumber < 120
+		ORDER BY c.customerNumber asc
+
+=>SELECT *FROM customers c where c.customerNumber < 120
+		ORDER BY c.customerNumber DESC
+
+-----------------------------------------------SELECCIONA CAMPO QUE CONTENGA ALGO O OTRO
+=>SELECT *FROM customers c where c.customerNumber = 119
+		or c.customerName like 'Sig%'
+
+-----------------------------------------------SELECCIONA ALGO CON LIMITES
+=>SELECT *FROM customers c where c.customerName like '%pe%' limit 3
+
+-----------------------------------------------UNION DE TABLAS 
+=>select c.contactFirstName, o.orderNumber from customers c
+		join orders o on c.customerNumber = o.customerNumber
+		limit 6
+			# 1-prodctos de un cliente
+select c.customerName, p.productName from customers c
+		join orders o on c.customerNumber = o.customerNumber
+		join orderdetails k on o.orderNumber = k.orderNumber
+		join products p on k.productCode = p.productCode
+		where c.customerName like 'Ate%'
+			# 2-Mostrar productos de un cliente y su vendedor
+select c.customerName, p.productName, e.firstName from customers c
+		join orders o on o.customerNumber = c.customerNumber
+		join orderdetails k on k.orderNumber = o.orderNumber
+		join products p on p.productCode = k.productCode
+		join employees e on e.employeeNumber = c.salesRepEmployeeNumber
+		where c.customerName like 'Ate%'
+			# 3-
+
+			# 4-Empleados que han vendido un mismo producto
+=>select distinct e.employeeNumber, e.firstName, 
+		e.lastName, p.productName from employees e
+		join customers c on c.salesRepEmployeeNumber = e.employeeNumber
+		join orders o on o.customerNumber = c.customerNumber
+		join orderdetails k on k.orderNumber = o.orderNumber
+		join products p on p.productCode = k.productCode
+		where p.productName = '1958 Setra Bus'
+			# 5-Cuantas ventas tiene el porducto mas vendido
+=>select p.productName producto, sum(o.quantityOrdered) cantidad from products p
+		join orderdetails o on o.productCode = p.productCode
+		join orders k on k.orderNumber = o.orderNumber
+		where k.status = 'Shipped'
+		group by p.productName
+		order by cantidad desc limit 1
+			# 6- ventas por vendedor
+=>select e.firstName vendedor, sum(c.salesRepEmployeeNumber) cantidad from employees e
+		join customers c on c.salesRepEmployeeNumber = e.employeeNumber
+		join orders o on o.customerNumber = c.customerNumber
+		and o.status = 'Shipped'
+		group by e.firstName
+		order by firstName desc limit 1
+
+			# 7- Empleados por oficina que han vendido productos de precio entre 50000 y 80000
+=>select e.employeeNumber, e.firstName, o.city from employees e
+		join offices o on o.officeCode = e.officeCode
+		join customers c on c.salesRepEmployeeNumber = e.employeeNumber
+		join payments p on p.customerNumber = c.customerNumber
+		where p.amount between 50000 and 80000
+		group by city
+
+
+
+#======================================= ejercicios ================================================
+			# Cliente que ha pagado entre 40 y 80mil y su vendedor
+=>select c.customerNumber 'Nro', c.customerName 'Cliente', e.firstName 'Vendedor'  from customers c
+		join employees e on c.salesRepEmployeeNumber = e.employeeNumber
+		join payments p on p.customerNumber = c.customerNumber
+		where p.amount between 40000 and 80000
+		group by customerName
+			# Cliente que ha pagado mas
+=>select c.customerNumber 'Numero', c.customerName 'Nombre', max(p.amount) 'Monto' from customers c
+		join payments p on p.customerNumber = c.customerNumber
+			#linea de producto mas comprado, cant y su oficina
+=>select l.productLine 'Linea', max(o.quantityOrdered) 'cantidad', k.city 'Oficina' from productlines l
+		join products prod on prod.productLine = l.productLine
+		join orderdetails o on o.productCode = prod.productCode
+		join orders ord on ord.orderNumber = o.orderNumber
+		join customers c on c.customerNumber = ord.customerNumber
+		join employees e on e.employeeNumber = c.salesRepEmployeeNumber
+		join offices k on k.officeCode = e.officeCode
+
+
+		#union de nombres en diferentes tablas
+		select e.nombre, o.id_orden from estudiante e
+		union
+		select s.razon_social, o.id_orden from sponsor s
+		union
+		select p.razon_social, o.id_orden from proveedor p

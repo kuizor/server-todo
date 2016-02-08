@@ -1,0 +1,29 @@
+Clase 5 - 15-01-2015
+Mentor: Yohana
+Tema: Rails
+Proyecto rails: SimCityRails 
+Contenido: 
+
+-Mayor
+-	City
+-		Factories (Fabrica)
+-			FactoryType
+			FactoryBasicMaterial
+			BasicMaterial
+				*MaterialRelations
+		commertialBuilding
+			ComplexMaterials
+				*MaterialRelations
+
+
+
+
+forzar a modificar los modelos -> rails g model nombreModelo campos -f
+
+Callback:
+	after_save
+	before_save
+	before_update
+	after_update
+	after_create
+	before_create

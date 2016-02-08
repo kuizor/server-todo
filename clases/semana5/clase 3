@@ -1,0 +1,27 @@
+Clase 3 - 13-01-2015
+Mentor: 
+Tema: Rails
+Contenido: Validaciones desde Rails
+			base de datos con MYSQL
+
+en caso de errores con la gema:
+	bundle install
+	bundle uptade
+
+Referencias en TAblas
+	has_one ->referencia a una
+
+Expresiones Regulares:
+	/a/ ->Busca A y cualquier parabra que contenga A
+
+validacion de email
+	EMAIL_REGEX= /\a[A-Z0-9._%a-z\-]+@(?:[A-Z0-9a-z\-]+\.)+[A-Za-z]{2,4}\$/
+
+	/\a(0-255)+.(0-255)+.(0-255)+.(0-255)$/
+
+	/\a ->busca a.
+	/\a[A-Z0-9._%a-z] -> busca Mayuscula, min, numero0-9, punto, _ y %
+	/\a[A-Z0-9._%a-z]+@ -> busca, mas(+) @
+	/\a....+@(?:[A-Z0-9a-z\-]-> busca despues del @ ?, : ,May, minus,num,barra y menor,\,(.)
+	/\a...+[A-Za-z]{2,4}\z/ ->busca espues del punto May,minus,de 2 a 4 caracteres..
+	$ -> $ dolar al final significa fin de la linea

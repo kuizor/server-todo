@@ -1,0 +1,121 @@
+#Lista de ingredientes
+
+
+cant							ingredientes			=>			sale
+================================================================================================
+-------------------1 Receta Basica--------------------------------------------------------------
+1					tronco										4 madera
+2					madera										4 palos
+1+1					palo+carbon									4 antorcha
+4					madera										1 banco-de-trabao
+8					piedra										1 horno
+8					madera										1 cofre
+1+2+4				libro+obsidiana+diamante					1 mesa de encanto
+1+3					barra_de_blaze+cobblestone					1 mesa de elaboracion de posiones
+7					hierro_lingote								1 caldero
+1+8					oho_de_ender+obsidiana						1 cofre de ender
+--------------------2 Receta de Bloques----------------------------------------------------------
+9					lingote_oro/hierro/diamante 				1 bloque de mineral
+4					arena_de_piedra_brillante					1 piedra brillante
+4					hilo 										1 bloque de lana
+5+4					arena+sulfuro								1 bloque de TNT
+3					piedra 										3 losa de piedra
+6					madera/piedra 								4 escalones
+4					bolas_de_nieve 								1 bloque de nieve
+4					roca										4 ladrillo de piedra
+6					ladrillo_de_piedra 							4 escalones de ladrillos de piedra
+3					ladrillo_de_piedra							3 losa de ladrillo de piedra
+4					arcilla										1 bloque de arcilla
+4					ladrillos_de_arcilla						1 bloque de ladrillo
+6					hierro										16 barras de hierro
+6					cristal										16 paneles de cristal
+6+3					madera+libro								1 biblioteca
+1+1					calabaza+antorcha							1 yack-o-lantern
+--------------------3 Receta de herramientas-------------------------------------------------------
+2+3					palo+madera/cobblestone/metal/oro/diamante 	1 hacha
+2+3					palo+madera/cobblestone/metal/oro/diamante 	1 pico
+2+1					palo+madera/cobblestone/metal/oro/diamante 	1 pala
+2+2					palo+madera/cobblestone/metal/oro/diamante  1 azada
+1+1					flint+lingote_de_metal						1 encendedor
+3					lingote_de_metal							1 cubo
+4+1					lingote_de_metal+polvo_de_redstone 			1 bruhula
+8+1					papel+bruhula								1 mapa
+4+1					lingote_oro+polvo_de_redstone				1 reloh
+4+2					palo+hilo_de_araña							1 caña de pescar
+2					lingote_de_metal 							1 tihera
+--------------------4 Receta de Armas--------------------------------------------------------------
+1+2					palo+madera/cobblestone/metal/oro/diamante 	1 espada
+3+3					palo+hilo_de_araña 							1 arco
+1+1+1				palo+flint+pluma							1 flecha
+--------------------5 Receta de Armaduras----------------------------------------------------------
+5					cuero/metal/oro/diamante 					1 casco
+8					cuero/metal/oro/diamante 					1 pechera
+7					cuero/metal/oro/diamante 					1 pantalon
+4 					cuero/metal/oro/diamante 					1 botas
+--------------------6 Receta de Transporte---------------------------------------------------------
+5					lingote_de_metal 							1 minecart
+5					madera 										1 barco
+1+1					minecart+horno 								1 minecart impulsador
+1+1					minecart+baul 								1 minecart contenedor
+1+6					palo+lingote_de_metal 						16 riel
+1+1+6				palo+polvo_de_piedra_roha+lingote_oro 		6 riel impulsador
+1+1+6				placa_de_presion+polvo_de_piedra_roha+lingote_de_metal 6 riel detector
+--------------------7 Receta de Comida-------------------------------------------------------------
+3					madera 										1 bol
+1+1+1				hongo_marron+hongo_roho+bol 				1 sopa de hongos
+3					trigo 										1 pan
+1 					caña_de_azucar								1 azucar
+1+2+3+3				huevo+azucar+leche+trigo					1 pastel
+1+8					manzana+bloque_de_oro						1 manzana dorada
+1+2					cacao+trigo									1 galleta
+9					sandia_cortada								1 bloque de melon
+1					sandia_cortada 								1 semilla de melon
+
+
+
+
+
+recetas = {arco: {palo: 3, hilo_arana: 3}, 
+				  flecha:{palo:1, flint:1, pluma:1},
+				  barco:{madera: 5},
+				  horno:{piedra: 8},
+				  cofre:{madera: 8},
+				  mesa_de_encantamiento:{libro:1, obsidiana:4, diamante:3},
+				  bloque_de_tnt:{arena:5, sulfuro:4}}
+
+
+
+
+recetas = {arco: {palo: 3, hilo_arana: 3}, flecha:{palo:1, flint:1, pluma:1}, barco:{madera: 5}, horno:{piedra: 8}, cofre:{madera: 8}, mesa_de_encantamiento:{libro:1, obsidiana:4, diamante:3}, bloque_de_tnt:{arena:5, sulfuro:4}}
+
+
+
+
+disponible = {tronco: 20,
+			  madera: 20,
+			  palo: 20,
+			  carbon: 20,
+			  piedra: 20,
+			  libro: 20,
+			  obsidiana: 20,
+			  diamante: 20,
+			  barra_de_blaze: 20,
+			  cobblestone: 20,
+			  oho_de_ender: 20,
+			  lingote_de_oro: 20,
+			  lingote_de_hierro: 20,
+			  diamante: 20,
+			  arena_de_piedra_brillante: 20,
+			  hilo: 20,
+			  arena: 20,
+			  sulfuro: 20,
+			  bolas_de_nieve: 20,
+			  roca: 20,
+			  ladrillo_de_piedra: 20,
+			  arcilla: 20,
+			  ladrillos_de_arcilla: 20,
+			  cristal: 20,
+			  barra_de_blaze: 20,
+			  calabaza: 20,
+			  antorcha: 20,
+}

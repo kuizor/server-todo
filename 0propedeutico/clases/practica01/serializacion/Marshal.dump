@@ -1,0 +1,7 @@
+require 'caero'
+	p1 = Caero.new(1234,'A',14,100,25000)
+	puts p1.saldo.to_i
+	File.open('pepe','w+') do |f|
+		Marshal.dump(p1,f)
+	end
+end

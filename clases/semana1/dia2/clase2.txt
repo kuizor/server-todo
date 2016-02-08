@@ -1,0 +1,31 @@
+back END	=> Racer
+front END	=> Angular
+j
+
+===================================HASH=======================
+h = hash.new    =>{} = declaracion
+
+definir un hash => h1 = {} ó h1 = hash.new
+
+
+h1[:hola] = "Se usa para saludar"   = objeto
+h1[:chap] = "Se usa para despedir"	= objeto
+
+==================================METODO MAP=====================
+
+
+Arrays
+
+[1,2,3,4,5,6].include? 5  =>pregunta si el 5 existe en el array (true/false).
+[1,2,3,4,5,6].reverse!    =>reordena y modifica la referencia.
+[1,2,3,4,5,6].sort!		  =>con el "!" modifica la referencia en memoria.
+
+
+
+========================================eercicios====================
+crear un arreglo de 50 numeros random / 1..100.
+1)numero de pares
+2)numero de impares
+3)si un numero PAR tiene correspondencia con un indice par
+4)luego buscar numero 1..100
+5)si existe, en que posicion esta..

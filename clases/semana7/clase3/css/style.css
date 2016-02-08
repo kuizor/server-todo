@@ -1,0 +1,55 @@
+body{
+	background-color: yellow;
+	background-image: url(../img/background_transparent.png);	
+}
+.content{
+	height: 100vh;
+	width: 100%;
+}
+.header{
+	height: 20%;
+}
+.margen{
+	height: 20%;
+}
+.body{
+	height: 60%;
+}
+.baston{
+	background-image: url(../img/ornament_5.png);
+    background-repeat: no-repeat;
+    width: 65px;
+    height: 140px;
+    float: left;
+    margin-left: 10%;
+}
+.arbol{
+	background-image: url(../img/ornament_6.png);
+    background-repeat: no-repeat;
+    width: 65px;
+    height: 140px;
+    float: right;
+    margin-right: 10%;
+}
+#text{
+	margin-left: 30%;
+	margin-right: 30%;
+	text-align: center;
+	font-family: sans-serif;
+}
+.rigo{
+	background-image: url(../img/rigovather.png);
+	background-repeat: no-repeat;
+	width: 234px;
+	height: 300px;
+	float: left;
+	margin-left: 20%;
+	margin-top: 5%;
+}
+.mensaje{
+	width: 330px;
+    height: 150px;
+    background-color: black;
+    margin-left: 40%;
+}
+}

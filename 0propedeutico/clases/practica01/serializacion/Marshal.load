@@ -1,0 +1,6 @@
+require 'caero'
+File.open("pepe", "w") do  |f|
+	@p1 = Marshal.load(f)
+end
+
+puts "algo aqui", @p1.pass.to_i +' '+ @p1.tipo +' ' +@p1.ci.to_i +' '+@p1.monto+' '+@p1.saldo

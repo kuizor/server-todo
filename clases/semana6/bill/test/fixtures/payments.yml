@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 
+  order_id: 
+  quantity: 1
+  subtotal: 1
+  iva: 1
+  total: 1
+
+two:
+  customer_id: 
+  order_id: 
+  quantity: 1
+  subtotal: 1
+  iva: 1
+  total: 1

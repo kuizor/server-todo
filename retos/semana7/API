@@ -1,0 +1,45 @@
+Proyecto Hack (Meme) Api
+Registro:
+Para poder usar el Api de manera general y todas sus funciones, debemos registrarno
+para eso vamos a la siguiente url http://localhost:3000/register en HTTPS POST y en el Headers debemos colocar Content-type - application/json
+Ejemplo de code de Json:
+{
+"user":
+{
+"user":"hack",  #usuario que queremos registrar
+"password":"hack" #clave le debemos poner al usuario
+}
+}
+Login: 
+Para poder acceder con tu usuario debes ir a la siguiente url http://localhost:3000/login?user=username&password=12345 en HTTPS GET
+Ejemplo:
+http://localhost:3000/login?user=username2&password=clave
+username = tu usario
+clave = tu clave
+Logout:
+Para cerrar seccion solo debemos ir a la siguiente url http://localhost:3000/logout en HTTPS GET
+===================================================
+
+
+* Maneje registro de usuarios.
+ 	16
++* Tenga Autenticación hecha por ustedes.
+
+
+
+ 	18
++* Los usuarios puedan crear los memes via MemeGenerator y ser guardados en el sistema.
+ 	19
++* Los memes puedan ser categorizados.
+ 	20
++* Los memes puedan ser tageados.
+ 	21
++* Los memes puedan ser enviado por correo electrónico.
+ 	22
++* Los memes puedan ser enviados a una red social de su preferencia (Facebook está prohibido por su ranciedad).
+ 	23
++* Los usuarios puedan elegir si su meme es privado o no, en caso de que un meme sea público, este puede ser listado por cualquier usuario.
+ 	24
++* Los memes públicos pueden ser rankeados.
+ 	25
++* Los usuarios no registrados solo pueden ver un listado de los memes más populares.

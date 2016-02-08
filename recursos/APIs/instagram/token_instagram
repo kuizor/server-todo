@@ -1,0 +1,20 @@
+2869266403.1677ed0.3122eeba90d246aea566000045231e6a
+
+http://instagram.pixelunion.net/
+
+
+#probar el token
+https://www.instagram.com/oauth/authorize/?client_id=[CLIENT_ID_HERE]&redirect_uri=http://localhost&response_type=token
+
+
+
+-------------------------------TOKEN---------------------
+CLIENT ID	37f8c4c386e04d1397d4298af4e0ac67
+CLIENT SECRET	c7eb528e5303496383f5ad6c737c0eeb
+WEBSITE URL	http://127.0.0.1/call
+REDIRECT URI	http://127.0.0.1/call
+
+--------------------------------USER ID-------------------
+http://jelled.com/instagram/lookup-user-id#
+
+User ID: 2869266403
